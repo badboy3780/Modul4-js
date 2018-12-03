@@ -36,7 +36,7 @@ this.reset = function () {
    return this.customerMoney = 0;
 };
 
-};
+}
 
 const products = {
   bread: 10,
