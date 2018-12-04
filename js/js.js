@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
 function Cashier(name, productDatabase) {
   this.name = name;
   this.productDatabase = productDatabase;
   this.customerMoney = 0;
   this.getCustomerMoney = function (value) {
-    this.customerMoney = value;
+      this.customerMoney = value;
   };
 
 this.countTotalPrice = function (order) {
@@ -16,12 +16,11 @@ this.countTotalPrice = function (order) {
     return totalPrice;
 };
 
-this.countChange = function (totalPrice){
-
-  if(this.customerMoney < totalPrice){
-    return null;
-  }
-    return this.customerMoney - totalPrice;
+this.countChange = function (){
+        if(this.customerMoney < totalPrice){
+            return null;
+        }
+        return this.customerMoney - totalPrice;
 };
 
 this.onSuccess = function (change) {
