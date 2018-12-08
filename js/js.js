@@ -17,22 +17,19 @@ this.countTotalPrice = function (order) {
 };
 
 this.countChange = function (){
-        if(this.customerMoney < totalPrice){
-            return null;
-        }
-        return this.customerMoney - totalPrice;
+    return  this.customerMoney < totalPrice ?  null : this.customerMoney - totalPrice;
 };
 
 this.onSuccess = function (change) {
-  return  console.log(`Спасибо за покупку, ваша сдача ${change}!`);
+  return  (`Спасибо за покупку, ваша сдача ${change}!`);
 };
 
 this.onError = function() {
-  return console.log('Очень жаль, вам не хватает денег на покупки');
+  return ('Очень жаль, вам не хватает денег на покупки');
 };
 
 this.reset = function () {
-   return this.customerMoney = 0;
+    this.customerMoney = 0;
 };
 
 }
