@@ -21,11 +21,11 @@ this.countChange = function (){
 };
 
 this.onSuccess = function (change) {
-  return  (`Спасибо за покупку, ваша сдача ${change}!`);
+    console.log(`Спасибо за покупку, ваша сдача ${change}!`);
 };
 
 this.onError = function() {
-  return ('Очень жаль, вам не хватает денег на покупки');
+    console.log('Очень жаль, вам не хватает денег на покупки');
 };
 
 this.reset = function () {
